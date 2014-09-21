@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html>
+﻿<html dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="title" content="LayoutIt! - Bootstrap可视化布局系统">
-<meta name="description" content="LayoutIt! 可拖放排序在线编辑的Bootstrap可视化布局系统">
-<meta name="keywords" content="可视化,布局,系统">
-<title>Bootstrap 可视化布局系统</title>
+<meta charset="utf-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+<meta name="title" content="LayoutIt! - Bootstrap可视化布局系统"></meta>
+<meta name="description" content="LayoutIt! 可拖放排序在线编辑的Bootstrap可视化布局系统"></meta>
+<meta name="keywords" content="可视化,布局,系统"></meta>
+<title>Bootstrap sistema de diseño visual</title>
 
-<!-- Le styles -->
-<link href="css/bootstrap-combined.min.css" rel="stylesheet">
-<link href="css/layoutit.css" rel="stylesheet">
 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-		<script src="js/html5shiv.js"></script>
-	<![endif]-->
+<link href="css/bootstrap-combined.min.css" rel="stylesheet"></link>
+<link href="css/layoutit.css" rel="stylesheet"></link>
 
-	<!-- Fav and touch icons -->
-	<link rel="shortcut icon" href="img/favicon.png">
+
+
+
+	
+	<link rel="shortcut icon" href="img/favicon.png"></link>
 	
 	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<![endif]-->
+	
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
@@ -34,45 +29,45 @@
 <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
-<body style="min-height: 660px; cursor: auto;" class="edit">
+<body class="edit" dir="ltr" style="min-height:660px">
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
-      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="brand" href="http://justjavac.com/tools/layoutit/"><img src="img/favicon.png"> 可视化布局<span class="label">BETA</span></a>
+      <button class="btn btn-navbar" type="button" data-target=".nav-collapse" data-toggle="collapse"></button>
+      <a class="brand" href="http://justjavac.com/tools/layoutit/"><img src="img/favicon.png" /> Diseño <span class="label">BETA</span> Visual</a>
       <div class="nav-collapse collapse">
       	<ul class="nav" id="menu-layoutit">
           <li class="divider-vertical"></li>
           <li>
             <div class="btn-group">
-              <a class="btn btn-primary" href="http://justjavac.com" target="_blank"><i class="icon-home icon-white"></i>首页</a>
+              <a class="btn btn-primary" href="http://justjavac.com" target="_blank"><i class="icon-home icon-white"></i> Inicio</a>
             </div>
             <div class="btn-group" data-toggle="buttons-radio">
-              <button type="button" id="edit" class="btn btn-primary active"><i class="icon-edit icon-white"></i>编辑</button>
-              <button type="button" class="btn btn-primary" id="devpreview"><i class="icon-eye-close icon-white"></i>布局编辑</button>
-              <button type="button" class="btn btn-primary" id="sourcepreview"><i class="icon-eye-open icon-white"></i>预览</button>
+              <button type="button" id="edit" class="btn btn-primary active"><i class="icon-edit icon-white"></i> Edición</button>
+              <button type="button" class="btn btn-primary" id="devpreview"><i class="icon-eye-close icon-white"></i> Layout Editor</button>
+              <button type="button" class="btn btn-primary" id="sourcepreview"><i class="icon-eye-open icon-white"></i> Prevista</button>
             </div>
             <div class="btn-group">
-              <button type="button" class="btn btn-primary" data-target="#downloadModal" rel="/build/downloadModal" role="button" data-toggle="modal"><i class="icon-chevron-down icon-white"></i>下载</button>
-              <button class="btn btn-primary" href="/share/index" role="button" data-toggle="modal" data-target="#shareModal"><i class="icon-share icon-white"></i>保存</button>
-              <button class="btn btn-primary" href="#clear" id="clear"><i class="icon-trash icon-white"></i>清空</button>
+              <button type="button" class="btn btn-primary" rel="/build/downloadModal" data-target="#downloadModal" role="button" data-toggle="modal"><i class="icon-chevron-down icon-white"></i> Descargar</button>
+              <button class="btn btn-primary" href="/share/index" role="button" data-toggle="modal" data-target="#shareModal"><i class="icon-share icon-white"></i> Guardar</button>
+              <button class="btn btn-primary" href="#clear" id="clear"><i class="icon-trash icon-white"></i> Vacío</button>
             </div>
             <div class="btn-group">
-								<button class="btn btn-primary" href="#undo" id="undo" ><i class="icon-arrow-left icon-white"></i>撤销</button>
-								<button class="btn btn-primary" href="#redo" id="redo" ><i class="icon-arrow-right icon-white"></i>重做</button>
+								<button class="btn btn-primary" href="#undo" id="undo"><i class="icon-arrow-left icon-white"></i> Revocación</button>
+								<button class="btn btn-primary" href="#redo" id="redo"><i class="icon-arrow-right icon-white"></i> Rehacer</button>
 			</div>
           </li>
         </ul>
         <ul class="nav pull-right">
                	  <li>
                	  <div class="btn-group">
-               	  <span><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=justjavac&repo=layoutit&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe></span>
-			      <span><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=justjavac&repo=layoutit&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe></span>
+               	  <span><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=justjavac&amp;repo=layoutit&amp;type=watch&amp;count=true" width="80px" height="20px" allowtransparency="true" frameborder="0" scrolling="0"></iframe></span>
+			      <span><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=justjavac&amp;repo=layoutit&amp;type=fork&amp;count=true" width="80px" height="20px" allowtransparency="true" frameborder="0" scrolling="0"></iframe></span>
 			      </div>
 			      </li>
           </ul>
       </div>
-      <!--/.nav-collapse --> 
+       
     </div>
   </div>
 </div>
@@ -85,15 +80,15 @@
             <div class="pull-right popover-info"><i class="icon-question-sign "></i>
               <div class="popover fade right">
                 <div class="arrow"></div>
-                <h3 class="popover-title">功能</h3>
-                <div class="popover-content">在这里设置你的栅格布局, 栅格总数默认为12, 用空格分割每列的栅格值, 如果您需要了解更多信息，请访问<a target="_blank" href="http://twitter.github.io/bootstrap/scaffolding.html#gridSystem">Bootstrap栅格系统.</a></div>
+                <h3 class="popover-title">Función</h3>
+                <div class="popover-content">Aquí configurar el diseño de la red, el número total de incumplimientos de la red a 12, con unos valores raster división de espacio para cada columna, si necesita más información, por favor visite <a href="http://twitter.github.io/bootstrap/scaffolding.html#gridSystem" target="_blank">sistema de red Bootstrap.</a></div>
               </div>
             </div>
-            <i class="icon-plus icon-white"></i> 布局设置 </li>
-          <li style="display: list-item;" class="rows" id="estRows">
-            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
+            <i class="icon-plus icon-white"></i> Ajustes de formato </li>
+          <li class="rows" id="estRows" style="display:list-item">
+            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
               <div class="preview">
-                <input value="12" type="text">
+                <input value="12" type="text" />
               </div>
               <div class="view">
                 <div class="row-fluid clearfix">
@@ -101,9 +96,9 @@
                 </div>
               </div>
             </div>
-            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
+            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
               <div class="preview">
-                <input value="6 6" type="text">
+                <input value="66" type="text" />
               </div>
               <div class="view">
                 <div class="row-fluid clearfix">
@@ -112,9 +107,9 @@
                 </div>
               </div>
             </div>
-            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
+            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
               <div class="preview">
-                <input value="8 4" type="text">
+                <input value="84" type="text" />
               </div>
               <div class="view">
                 <div class="row-fluid clearfix">
@@ -123,9 +118,9 @@
                 </div>
               </div>
             </div>
-            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
+            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
               <div class="preview">
-                <input value="4 4 4" type="text">
+                <input value="444" type="text" />
               </div>
               <div class="view">
                 <div class="row-fluid clearfix">
@@ -135,9 +130,9 @@
                 </div>
               </div>
             </div>
-            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
+            <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
               <div class="preview">
-                <input value="2 6 4" type="text">
+                <input value="264" type="text" />
               </div>
               <div class="view">
                 <div class="row-fluid clearfix">
@@ -150,720 +145,709 @@
           </li>
         </ul>
         <ul class="nav nav-list accordion-group">
-          <li class="nav-header"><i class="icon-plus icon-white"></i> 基本CSS
+          <li class="nav-header"><i class="icon-plus icon-white"></i> CSS básico
             <div class="pull-right popover-info"><i class="icon-question-sign "></i>
               <div class="popover fade right">
                 <div class="arrow"></div>
-                <h3 class="popover-title">帮助</h3>
-                <div class="popover-content">这里提供了一系列基本元素样式，你可以通过区块右上角的编辑按钮修改样式设置。如需了解更多信息，请访问<a target="_blank" href="http://twitter.github.io/bootstrap/base-css.html">基本CSS.</a></div>
+                <h3 class="popover-title">Ayuda</h3>
+                <div class="popover-content">Aquí hay una serie de elementos básicos del estilo, usted puede estilo de la configuración mediante el botón Editar para modificar el ángulo superior derecho del bloque.Para obtener más información, visite la <a href="http://twitter.github.io/bootstrap/base-css.html" target="_blank">CSS básico.</a></div>
               </div>
             </div>
           </li>
-          <li style="display: none;" class="boxes" id="elmBase">
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> 
-            	 <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">对齐 <span class="caret"></span></a>
+          <li class="boxes" id="elmBase">
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> 
+            	 <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown">Alinear <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="text-left">靠左</a></li>
-                <li class=""><a href="#" rel="text-center">居中</a></li>
-                <li class=""><a href="#" rel="text-right">靠右</a></li>
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="text-left">Mantengase a la izquierda</a></li>
+                <li class=""><a href="#" rel="text-center">Centro</a></li>
+                <li class=""><a href="#" rel="text-right">Manténgase a la derecha</a></li>
               </ul>
-              </span> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">标记 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="muted">禁用</a></li>
-                <li class=""><a href="#" rel="text-warning">警告</a></li>
-                <li class=""><a href="#" rel="text-error">错误</a></li>
-                <li class=""><a href="#" rel="text-info">提示</a></li>
-                <li class=""><a href="#" rel="text-success">成功</a></li>
+              </span> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group">Marcos <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="muted">Desactivar</a></li>
+                <li class=""><a href="#" rel="text-warning">Advertencia</a></li>
+                <li class=""><a href="#" rel="text-error">Error</a></li>
+                <li class=""><a href="#" rel="text-info">Consejos</a></li>
+                <li class=""><a href="#" rel="text-success">Éxito</a></li>
               </ul>
-              </span> </span>
-              <div class="preview">标题栏</div>
+              </span> </html>
+              <div class="preview">La barra de título</div>
               <div class="view">
-                <h3 contenteditable="true">h3. 这是一套可视化布局系统.</h3>
+                <h3 contenteditable="true">h3. Este es un sistema de diseño visual.</h3>
               </div>
-            </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">对齐 <span class="caret"></span></a>
+            
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown">Alinear <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="text-left">靠左</a></li>
-                <li class=""><a href="#" rel="text-center">居中</a></li>
-                <li class=""><a href="#" rel="text-right">靠右</a></li>
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="text-left">Mantengase a la izquierda</a></li>
+                <li class=""><a href="#" rel="text-center">Centro</a></li>
+                <li class=""><a href="#" rel="text-right">Manténgase a la derecha</a></li>
               </ul>
-              </span> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">标记 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="muted">禁用</a></li>
-                <li class=""><a href="#" rel="text-warning">警告</a></li>
-                <li class=""><a href="#" rel="text-error">错误</a></li>
-                <li class=""><a href="#" rel="text-info">提示</a></li>
-                <li class=""><a href="#" rel="text-success">成功</a></li>
+              </span> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group">Marcos <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="muted">Desactivar</a></li>
+                <li class=""><a href="#" rel="text-warning">Advertencia</a></li>
+                <li class=""><a href="#" rel="text-error">Error</a></li>
+                <li class=""><a href="#" rel="text-info">Consejos</a></li>
+                <li class=""><a href="#" rel="text-success">Éxito</a></li>
               </ul>
-              </span> <a class="btn btn-mini" href="#" rel="lead">Lead</a> </span>
-              <div class="preview">段落</div>
+              </span> <a class="btn btn-mini" href="#" rel="lead">Plomo</a> </div>
+              <div class="preview">Párrafo</div>
               <div class="view" contenteditable="true">
-                <p><em>Git</em>是一个分布式的版本控制系统，最初由<b>Linus Torvalds</b>编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。 </p>
+                <p><em>Git</em> es un sistema de control de versiones distribuido, escrito originalmente por <b>Linus Torvalds,</b> Linux kernel código utilizado para la gestión.Tras el lanzamiento, Git en otros proyectos también alcanzó un gran éxito, especialmente en la comunidad Ruby. </p>
               </div>
-            </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button></span>
-              <div class="preview">地址</div>
+            
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
+              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button></span>
+              <div class="preview">Dirección</div>
               <div class="view">
                 <address contenteditable="true">
-                <strong>Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-                <abbr title="Phone">P:</abbr> (123) 456-7890
+                <strong>Twitter, Inc.</strong><br />
+                795 Folsom St, Suite 600<br />
+                San Francisco, CA 94107<br />
+                <abbr title="Teléfono">P:</abbr> (123) 456-7890
                 </address>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"> <a class="btn btn-mini" href="#" rel="pull-right">右对齐</a> </span>
-              <div class="preview">引用块</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Arrastre el</span> <a class="btn btn-mini" href="#" rel="pull-right"><span class="configuration">alineado a la derecha</span></a>
+              <div class="preview">Bloque de referencia</div>
               <div class="view clearfix">
                 <blockquote contenteditable="true">
-                  <p>github是一个全球化的开源社区.</p>
-                  <small>关键词 <cite title="Source Title">开源</cite></small> </blockquote>
+                  <p>GitHub es una comunidad de código abierto global.</p>
+                  <small>Palabras clave <cite title="Fuente Título">de código abierto</cite></small> </blockquote>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="unstyled">无样式</a> <a class="btn btn-mini" href="#" rel="inline">嵌入</a> </span>
-              <div class="preview">无序列表</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="unstyled">No hay un estilo</a> <a class="btn btn-mini" href="#" rel="inline">incrustación</a> </span>
+              <div class="preview">Lista desordenada</div>
               <div class="view">
                 <ul contenteditable="true">
-                  <li>新闻资讯</li>
-                  <li>体育竞技</li>
-                  <li>娱乐八卦</li>
-                  <li>前沿科技</li>
-                  <li>环球财经</li>
-                  <li>天气预报</li>
-                  <li>房产家居</li>
-                  <li>网络游戏</li>
+                  <li>Noticias</li>
+                  <li>Deporte</li>
+                  <li>Entretenimiento chisme</li>
+                  <li>Tecnología de vanguardia</li>
+                  <li>Global Finance</li>
+                  <li>Pronóstico del Tiempo</li>
+                  <li>Propiedad Inicio</li>
+                  <li>Los juegos en línea</li>
                 </ul>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="unstyled">无样式</a> <a class="btn btn-mini" href="#" rel="inline">嵌入</a> </span>
-              <div class="preview">有序列表</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="unstyled">No hay un estilo</a> <a class="btn btn-mini" href="#" rel="inline">incrustación</a> </span>
+              <div class="preview">Lista ordenada</div>
               <div class="view">
                 <ol contenteditable="true">
-                  <li>新闻资讯</li>
-                  <li>体育竞技</li>
-                  <li>娱乐八卦</li>
-                  <li>前沿科技</li>
-                  <li>环球财经</li>
-                  <li>天气预报</li>
-                  <li>房产家居</li>
-                  <li>网络游戏</li>
+                  <li>Noticias</li>
+                  <li>Deporte</li>
+                  <li>Entretenimiento chisme</li>
+                  <li>Tecnología de vanguardia</li>
+                  <li>Global Finance</li>
+                  <li>Pronóstico del Tiempo</li>
+                  <li>Propiedad Inicio</li>
+                  <li>Los juegos en línea</li>
                 </ol>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="dl-horizontal">竖向对齐</a> </span>
-              <div class="preview">详细描述</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="dl-horizontal">Alineación vertical</a> </span>
+              <div class="preview">Descripción detallada</div>
               <div class="view">
                 <dl contenteditable="true">
                   <dt>Rolex</dt>
-                  <dd>劳力士创始人为汉斯.威尔斯多夫，1908年他在瑞士将劳力士注册为商标。</dd>
+                  <dd>Fundador de Rolex Hans.Wilsdorf, en 1908 se registró como marca comercial en la Rolex Suiza.</dd>
                   <dt>Vacheron Constantin</dt>
-                  <dd>始创于1775年的江诗丹顿已有250年历史，</dd>
-                  <dd>是世界上历史最悠久、延续时间最长的名表之一。</dd>
+                  <dd>Fundada en 1775, Vacheron Constantin ha sido 250 años de historia,</dd>
+                  <dd>Es la continuación más antiguo y el más largo del mundo de los relojes.</dd>
                   <dt>IWC</dt>
-                  <dd>创立于1868年的万国表有“机械表专家”之称。</dd>
+                  <dd>Fundada en 1868, la CBI tiene unos &quot;expertos mecánicos&quot;, dijo.</dd>
                   <dt>Cartier</dt>
-                  <dd>卡地亚拥有150多年历史，是法国珠宝金银首饰的制造名家。</dd>
+                  <dd>Cartier tiene 150 años de historia, la joyería de fabricación francesa famosa joyería de oro y plata.</dd>
                 </dl>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">样式 <span class="caret"></span></a>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown">Estilo <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="table-striped">条纹</a></li>
-                <li class=""><a href="#" rel="table-bordered">边框</a></li>
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="table-striped">Rayas</a></li>
+                <li class=""><a href="#" rel="table-bordered">Frontera</a></li>
               </ul>
-              </span> <a class="btn btn-mini" href="#" rel="table-hover">鼠标指示</a> <a class="btn btn-mini" href="#" rel="table-condensed">紧凑</a> </span>
-              <div class="preview">表格</div>
+              </span> <a class="btn btn-mini" href="#" rel="table-hover">El puntero del ratón</a> <a class="btn btn-mini" href="#" rel="table-condensed">compacto</a> </span>
+              <div class="preview">Formulario</div>
               <div class="view">
                 <table class="table" contenteditable="true">
                   <thead>
                     <tr>
-                      <th>编号</th>
-                      <th>产品</th>
-                      <th>交付时间</th>
-                      <th>状态</th>
+                      <th>Número de serie</th>
+                      <th>Producto</th>
+                      <th>El tiempo de entrega</th>
+                      <th>Estado</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>TB - Monthly</td>
+                      <td>TB - Mensual</td>
                       <td>01/04/2012</td>
-                      <td>Default</td>
+                      <td>Por defecto</td>
                     </tr>
                     <tr class="success">
                       <td>1</td>
-                      <td>TB - Monthly</td>
+                      <td>TB - Mensual</td>
                       <td>01/04/2012</td>
-                      <td>Approved</td>
+                      <td>Aprobado</td>
                     </tr>
                     <tr class="error">
                       <td>2</td>
-                      <td>TB - Monthly</td>
+                      <td>TB - Mensual</td>
                       <td>02/04/2012</td>
-                      <td>Declined</td>
+                      <td>Rehusó</td>
                     </tr>
                     <tr class="warning">
                       <td>3</td>
-                      <td>TB - Monthly</td>
+                      <td>TB - Mensual</td>
                       <td>03/04/2012</td>
-                      <td>Pending</td>
+                      <td>A la espera de</td>
                     </tr>
                     <tr class="info">
                       <td>4</td>
-                      <td>TB - Monthly</td>
+                      <td>TB - Mensual</td>
                       <td>04/04/2012</td>
-                      <td>Call in to confirm</td>
+                      <td>Llamar para confirmar</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="form-inline">嵌入</a> </span>
-              <div class="preview">提交表单</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="form-inline">Insertar</a> </span>
+              <div class="preview">Enviar formulario</div>
               <div class="view">
 				<form>
 					<fieldset>
-					<legend contenteditable="true">表单项</legend>
-					<label contenteditable="true">表签名</label>
-					<input type="text" placeholder="Type something…">
-					<span class="help-block" contenteditable="true">这里填写帮助信息.</span>
+					<legend contenteditable="true">Tabla</legend> <label contenteditable="true">firma de</label> <legend contenteditable="true">una sola</legend> <label contenteditable="true">mesa</label>
+					<input type="text" placeholder="Type something…" />
+					<span class="help-block" contenteditable="true">Aquí para ayudar a completar la información.</span>
 					<label class="checkbox" contenteditable="true">
-					<input type="checkbox"> 勾选同意
+					<input type="checkbox" /> Tick ​​acuerdo
 					</label>
-					<button type="submit" class="btn" contenteditable="true">提交</button>
+					<button type="submit" class="btn" contenteditable="true">Enviar</button>
 					</fieldset>
 				</form>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="form-inline">嵌入</a> </span>
-              <div class="preview">搜索框</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="form-inline">Insertar</a> </span>
+              <div class="preview">Cuadro de búsqueda</div>
               <div class="view">
                 <form class="form-search">
-                  <input class="input-medium search-query" type="text">
-                  <button type="submit" class="btn" contenteditable="true">查找</button>
+                  <input class="input-medium search-query" type="text" />
+                  <button type="submit" class="btn" contenteditable="true">Encontrar</button>
                 </form>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"> </span>
-              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button></span>
-              <div class="preview">纵向表单</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"> </span>
+              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button></span>
+              <div class="preview">Forma vertical</div>
               <div class="view">
                 <form class="form-horizontal">
                   <div class="control-group">
-                    <label class="control-label" for="inputEmail" contenteditable="true">邮箱</label>
+                    <label class="control-label" for="inputEmail" contenteditable="true">E-mail</label>
                     <div class="controls">
-                      <input id="inputEmail" placeholder="Email" type="text">
+                      <input id="inputEmail" type="text" placeholder="Email" />
                     </div>
                   </div>
                   <div class="control-group">
-                    <label class="control-label" for="inputPassword" contenteditable="true">密码</label>
+                    <label class="control-label" for="inputPassword" contenteditable="true">Contraseña</label>
                     <div class="controls">
-                      <input id="inputPassword" placeholder="Password" type="password">
+                      <input id="inputPassword" type="password" placeholder="Password" />
                     </div>
                   </div>
                   <div class="control-group">
                     <div class="controls">
                       <label class="checkbox" contenteditable="true">
-                        <input type="checkbox">
-                        Remember me </label>
-                      <button type="submit" class="btn" contenteditable="true">登陆</button>
+                        <input type="checkbox" />
+                        Acuérdate de mí </label>
+                      <button type="submit" class="btn" contenteditable="true">Registrarse</button>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">样式 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="btn-primary">重点</a></li>
-                <li class=""><a href="#" rel="btn-info">信息</a></li>
-                <li class=""><a href="#" rel="btn-success">成功</a></li>
-                <li class=""><a href="#" rel="btn-warning">提醒</a></li>
-                <li class=""><a href="#" rel="btn-danger">危险</a></li>
-                <li class=""><a href="#" rel="btn-inverse">反转</a></li>
-                <li class=""><a href="#" rel="btn-link">链接</a></li>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Arrastre el</span> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group"><span class="configuration">estilo <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="btn-primary">Clave</a></li>
+                <li class=""><a href="#" rel="btn-info">Información</a></li>
+                <li class=""><a href="#" rel="btn-success">Éxito</a></li>
+                <li class=""><a href="#" rel="btn-warning">Recuérdele</a></li>
+                <li class=""><a href="#" rel="btn-danger">Peligro</a></li>
+                <li class=""><a href="#" rel="btn-inverse">Reverse</a></li>
+                <li class=""><a href="#" rel="btn-link">Enlaces</a></li>
               </ul>
-              </span> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">尺寸 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class=""><a href="#" rel="btn-large">大</a></li>
-                <li class="active"><a href="#" rel="">中</a></li>
-                <li class=""><a href="#" rel="btn-small">小</a></li>
-                <li class=""><a href="#" rel="btn-mini">微型</a></li>
+              </div> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group">Tamaño <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class=""><a href="#" rel="btn-large">Grandes</a></li>
+                <li class="active"><a href="#" rel="">En</a></li>
+                <li class=""><a href="#" rel="btn-small">Pequeño</a></li>
+                <li class=""><a href="#" rel="btn-mini">Miniatura</a></li>
               </ul>
-              </span> <a class="btn btn-mini" href="#" rel="btn-block">通栏</a> <a class="btn btn-mini" href="#" rel="disabled">禁用</a> </span>
-              <div class="preview">按钮</div>
+               <a class="btn btn-mini" href="#" rel="btn-block">Banner</a> <a class="btn btn-mini" href="#" rel="disabled">deshabilitado</a> 
+              <div class="preview">Button</div>
               <div class="view">
-                <button class="btn" type="button" contenteditable="true">按钮</button>
+                <button class="btn" type="button" contenteditable="true">Button</button>
               </div>
-            </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">样式 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="img-rounded">圆角</a></li>
-                <li class=""><a href="#" rel="img-circle">圆圈</a></li>
-                <li class=""><a href="#" rel="img-polaroid">相框</a></li>
+            
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Arrastre el</span> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group"><span class="configuration">estilo <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="img-rounded">Filete</a></li>
+                <li class=""><a href="#" rel="img-circle">Círculo</a></li>
+                <li class=""><a href="#" rel="img-polaroid">Frame</a></li>
               </ul>
-              </span> </span>
-              <div class="preview">图片</div>
-              <div class="view"> <img alt="140x140" src="img/a.jpg"> </div>
-            </div>
-          </li>
-        </ul>
+              </div> 
+              <div class="preview">Fotos</div>
+              <div class="view"> <img alt="140x140" src="img/a.jpg" /> </div>
+            
+          
+        
         <ul class="nav nav-list accordion-group">
-          <li class="nav-header"><i class="icon-plus icon-white"></i> 组件
+          <li class="nav-header"><i class="icon-plus icon-white"></i> Componentes
             <div class="pull-right popover-info"><i class="icon-question-sign "></i>
               <div class="popover fade right">
                 <div class="arrow"></div>
-                <h3 class="popover-title">帮助</h3>
-                <div class="popover-content">拖放组件到布局框内. 拖入后你可以设置组件样式. 查看这里获取更多帮助 <a target="_blank" href="http://twitter.github.io/bootstrap/components.html">Components.</a></div>
+                <h3 class="popover-title">Ayuda</h3>
+                <div class="popover-content">Arrastrar y soltar los componentes a la caja de diseño. Puede configurar el estilo componente de arrastre. Vea aquí para más ayuda <a href="http://twitter.github.io/bootstrap/components.html" target="_blank">Componentes.</a></div>
               </div>
             </div>
           </li>
-          <li style="display: none;" class="boxes" id="elmComponents">
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">方向<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">横向</a></li>
-                <li class=""><a href="#" rel="btn-group-vertical">竖向</a></li>
+          <li class="boxes" id="elmComponents">
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Arrastre</span> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group"><span class="configuration">dirección <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class="active"><a href="#" rel="">Transversal</a></li>
+                <li class=""><a href="#" rel="btn-group-vertical">Vertical</a></li>
               </ul>
-              </span> </span>
-              <div class="preview">按钮组</div>
+              </ul> 
+              <div class="preview">Button Group</div>
               <div class="view">
                 <div class="btn-group">
-                  <button class="btn" type="button"><i class="icon-align-left"></i></button>
-                  <button class="btn" type="button"><i class="icon-align-center"></i></button>
-                  <button class="btn" type="button"><i class="icon-align-right"></i></button>
-                  <button class="btn" type="button"><i class="icon-align-justify"></i></button>
+                  <button class="btn" type="button"></button>
+                  <button class="btn" type="button"></button>
+                  <button class="btn" type="button"></button>
+                  <button class="btn" type="button"></button>
                 </div>
               </div>
-            </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="dropup">上拉</a> </span>
-              <div class="preview">下拉菜单</div>
+            
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="dropup">Pullup</a> </span>
+              <div class="preview">Menú desplegable</div>
               <div class="view">
                 <div class="btn-group">
-                  <button class="btn" contenteditable="true">Action</button>
-                  <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                  <button class="btn" contenteditable="true">Acción</button>
+                  <button class="btn dropdown-toggle" data-toggle="dropdown"></button>
                   <ul class="dropdown-menu" contenteditable="true">
-                    <li><a href="#">操作</a></li>
-                    <li><a href="#">设置栏目</a></li>
-                    <li><a href="#">更多设置</a></li>
+                    <li><a href="#">Operación</a></li>
+                    <li><a href="#">Columna Set</a></li>
+                    <li><a href="#">Más configuraciones</a></li>
                     <li class="divider"></li>
-                    <li class="dropdown-submenu"> <a tabindex="-1" href="#">更多选项</a>
+                    <li class="dropdown-submenu"> <a href="#" tabindex="-1">Más opciones</a>
                       <ul class="dropdown-menu">
-                        <li><a href="#">操作</a></li>
-                        <li><a href="#">设置栏目</a></li>
-                        <li><a href="#">更多设置</a></li>
+                        <li><a href="#">Operación</a></li>
+                        <li><a href="#">Columna Set</a></li>
+                        <li><a href="#">Más configuraciones</a></li>
                       </ul>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">样式 <span class="caret"></span></a>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown">Estilo <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class=""><a href="#" rel="nav-tabs">线框</a></li>
-                <li class=""><a href="#" rel="nav-pills">图钉</a></li>
+                <li class=""><a href="#" rel="nav-tabs">Wireframe</a></li>
+                <li class=""><a href="#" rel="nav-pills">Chincheta</a></li>
               </ul>
-              </span> <a class="btn btn-mini" href="#" rel="nav-stacked">切换格式</a> </span>
-              <div class="preview">导航</div>
+              </span> <a class="btn btn-mini" href="#" rel="nav-stacked">Cambio de formatos</a> </span>
+              <div class="preview">Navegación</div>
               <div class="view">
                 <ul class="nav nav-tabs" contenteditable="true">
-                  <li class="active"><a href="#">首页</a></li>
-                  <li><a href="#">资料</a></li>
-                  <li class="disabled"><a href="#">信息</a></li>
-                  <li class="dropdown pull-right"> <a href="#" data-toggle="dropdown" class="dropdown-toggle">下拉 <b class="caret"></b></a>
+                  <li class="active"><a href="#">Inicio</a></li>
+                  <li><a href="#">Datos</a></li>
+                  <li class="disabled"><a href="#">Información</a></li>
+                  <li class="dropdown pull-right"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Desplegable <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">操作</a></li>
-                      <li><a href="#">设置栏目</a></li>
-                      <li><a href="#">更多设置</a></li>
+                      <li><a href="#">Operación</a></li>
+                      <li><a href="#">Columna Set</a></li>
+                      <li><a href="#">Más configuraciones</a></li>
                       <li class="divider"></li>
-                      <li><a href="#">分割线</a></li>
+                      <li><a href="#">Línea divisoria</a></li>
                     </ul>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="well">嵌入</a> </span>
-              <div class="preview">导航列表</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="well">Insertar</a> </span>
+              <div class="preview">Lista de navegación</div>
               <div class="view">
                 <ul class="nav nav-list" contenteditable="true">
-                  <li class="nav-header">列表标题</li>
-                  <li class="active"><a href="#">首页</a></li>
-                  <li><a href="#">库</a></li>
-                  <li><a href="#">应用</a></li>
-                  <li class="nav-header">功能列表</li>
-                  <li><a href="#">资料</a></li>
-                  <li><a href="#">设置</a></li>
+                  <li class="nav-header">Lista de títulos</li>
+                  <li class="active"><a href="#">Inicio</a></li>
+                  <li><a href="#">Biblioteca</a></li>
+                  <li><a href="#">Aplicaciones</a></li>
+                  <li class="nav-header">Lista de funciones</li>
+                  <li><a href="#">Datos</a></li>
+                  <li><a href="#">Set</a></li>
                   <li class="divider"></li>
-                  <li><a href="#">帮助</a></li>
+                  <li><a href="#">Ayuda</a></li>
                 </ul>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button></span>
-              <div class="preview">面包导航</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
+              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button></span>
+              <div class="preview">Navegación Pan</div>
               <div class="view">
                 <ul class="breadcrumb" contenteditable="true">
-                  <li><a href="#">主页</a> <span class="divider">/</span></li>
-                  <li><a href="#">类目</a> <span class="divider">/</span></li>
-                  <li class="active">主题</li>
+                  <li><a href="#">Inicio</a> <span class="divider">/</span></li>
+                  <li><a href="#">Categoría</a> <span class="divider">/</span></li>
+                  <li class="active">Tema</li>
                 </ul>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">尺寸 <span class="caret"></span></a>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown">Tamaño <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class=""><a href="#" rel="pagination-large">大</a></li>
-                <li class="active"><a href="#" rel="">中</a></li>
-                <li class=""><a href="#" rel="pagination-small">小</a></li>
-                <li class=""><a href="#" rel="pagination-mini">微型</a></li>
+                <li class=""><a href="#" rel="pagination-large">Grandes</a></li>
+                <li class="active"><a href="#" rel="">En</a></li>
+                <li class=""><a href="#" rel="pagination-small">Pequeño</a></li>
+                <li class=""><a href="#" rel="pagination-mini">Miniatura</a></li>
               </ul>
-              </span> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">位置 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">靠左</a></li>
-                <li class=""><a href="#" rel="pagination-centered">居中</a></li>
-                <li class=""><a href="#" rel="pagination-right">靠右</a></li>
+              </span> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group">Ubicación <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class="active"><a href="#" rel="">Mantengase a la izquierda</a></li>
+                <li class=""><a href="#" rel="pagination-centered">Centro</a></li>
+                <li class=""><a href="#" rel="pagination-right">Manténgase a la derecha</a></li>
               </ul>
-              </span> </span>
-              <div class="preview">翻页</div>
+              </span> </div>
+              <div class="preview">Página</div>
               <div class="view">
                 <div class="pagination">
                   <ul contenteditable="true">
-                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">Anterior</a></li>
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
                     <li><a href="#">4</a></li>
                     <li><a href="#">5</a></li>
-                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">Siguiente</a></li>
                   </ul>
                 </div>
               </div>
-            </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">样式 <span class="caret"></span></a>
+            
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown">Estilo <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="badge-success">成功</a></li>
-                <li class=""><a href="#" rel="badge-warning">警告</a></li>
-                <li class=""><a href="#" rel="badge-important">重要</a></li>
-                <li class=""><a href="#" rel="badge-info">提示</a></li>
-                <li class=""><a href="#" rel="badge-inverse">倒数</a></li>
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="badge-success">Éxito</a></li>
+                <li class=""><a href="#" rel="badge-warning">Advertencia</a></li>
+                <li class=""><a href="#" rel="badge-important">Importante</a></li>
+                <li class=""><a href="#" rel="badge-info">Consejos</a></li>
+                <li class=""><a href="#" rel="badge-inverse">Cuenta atrás</a></li>
               </ul>
               </span> </span>
-              <div class="preview">文字标签</div>
-              <div class="view"> <span class="label" contenteditable="true">文字标签</span> </div>
+              <div class="preview">Las etiquetas de texto</div>
+              <div class="view"> <span class="label" contenteditable="true">Las etiquetas de texto</span> </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">样式 <span class="caret"></span></a>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown">Estilo <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="badge-success">成功</a></li>
-                <li class=""><a href="#" rel="badge-warning">警告</a></li>
-                <li class=""><a href="#" rel="badge-important">重要</a></li>
-                <li class=""><a href="#" rel="badge-info">提示</a></li>
-                <li class=""><a href="#" rel="badge-inverse">倒数</a></li>
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="badge-success">Éxito</a></li>
+                <li class=""><a href="#" rel="badge-warning">Advertencia</a></li>
+                <li class=""><a href="#" rel="badge-important">Importante</a></li>
+                <li class=""><a href="#" rel="badge-info">Consejos</a></li>
+                <li class=""><a href="#" rel="badge-inverse">Cuenta atrás</a></li>
               </ul>
               </span> </span>
-              <div class="preview">微标</div>
+              <div class="preview">Escala Micro</div>
               <div class="view"> <span class="badge" contenteditable="true">1</span> </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="well">嵌入</a> </span>
-              <div class="preview">概述</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="well">Insertar</a> </span>
+              <div class="preview">Información general</div>
               <div class="view">
                 <div class="hero-unit" contenteditable="true">
-                  <h1>Hello, world!</h1>
-                  <p>这是一个可视化布局模板, 你可以点击模板里的文字进行修改, 也可以通过点击弹出的编辑框进行富文本修改. 拖动区块能实现排序. </p>
-                  <p><a class="btn btn-primary btn-large" href="#">参看更多 »</a></p>
+                  <h1>Hola, mundo!</h1>
+                  <p>Esta es una plantilla de diseño visual, puede hacer clic sobre el texto para ser plantilla modificada también se puede modificar haciendo clic en el cuadro de edición de texto enriquecido emergente. Arrastre los bloques para lograr la clasificación. </p>
+                  <p><a class="btn btn-primary btn-large" href="#">Ver más »</a></p>
                 </div>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button></span>
-              <div class="preview">页标题</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
+              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button></span>
+              <div class="preview">Título de la página</div>
               <div class="view">
                 <div class="page-header" contenteditable="true">
-                  <h1>页标题范例 <small>此处编写页标题</small></h1>
+                  <h1><small>Escritura</small> muestra <small>la página portada</small> título <small>aquí</small></h1>
                 </div>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button></span>
-              <div class="preview">文本</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
+              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button></span>
+              <div class="preview">Texto</div>
               <div class="view">
-                <h2 contenteditable="true">标题</h2>
-                <p contenteditable="true">本可视化布局程序在HTML5浏览器上运行更加完美, 能实现自动本地化保存, 即使关闭了网页, 下一次打开仍然能恢复上一次的操作.</p>
-                <p><a class="btn" href="#" contenteditable="true">查看更多 »</a></p>
+                <h2 contenteditable="true">Título</h2>
+                <p contenteditable="true">El programa de diseño visual en el navegador HTML5 funcione más perfecto, para conseguir la localización automática de guardar, incluso si cierra la página, la próxima vez que abra el todavía puede recuperar la última operación.</p>
+                <p><a class="btn" href="#" contenteditable="true">Ver más »</a></p>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button></span>
-              <div class="preview">预览列表</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
+              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button></span>
+              <div class="preview">Lista de vista previa</div>
               <div class="view">
                 <ul class="thumbnails">
                   <li class="span4">
-                    <div class="thumbnail"> <img alt="300x200" src="img/people.jpg">
+                    <div class="thumbnail"> <img alt="300x200" src="img/people.jpg" />
                       <div class="caption" contenteditable="true">
-                        <h3>冯诺尔曼结构</h3>
-                        <p>也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。</p>
-                        <p><a class="btn btn-primary" href="#">浏览</a> <a class="btn" href="#">分享</a></p>
+                        <h3>Estructura Von Norman</h3>
+                        <p>También conocido como Princeton estructura es un tipo de instrucciones de programa y memoria de datos de estructura de memoria combinada.Las instrucciones del programa y las direcciones de memoria de almacenamiento de datos apuntan a la misma dirección de memoria de distintas ubicaciones físicas.</p>
+                        <p><a class="btn btn-primary" href="#">Navegar</a> <a class="btn" href="#">Compartir</a></p>
                       </div>
                     </div>
                   </li>
                   <li class="span4">
-                    <div class="thumbnail"> <img alt="300x200" src="img/city.jpg">
+                    <div class="thumbnail"> <img alt="300x200" src="img/city.jpg" />
                       <div class="caption" contenteditable="true">
-                        <h3>哈佛结构</h3>
-                        <p>哈佛结构是一种将程序指令存储和数据存储分开的存储器结构，它的主要特点是将程序和数据存储在不同的存储空间中，进行独立编址。</p>
-                        <p><a class="btn btn-primary" href="#">浏览</a> <a class="btn" href="#">分享</a></p>
+                        <h3>Arquitectura Harvard</h3>
+                        <p>Arquitectura Harvard es una manera de almacenar instrucciones de programa y estructura de datos almacenada en la memoria separada, su principal característica es los programas y datos almacenados en el espacio de almacenamiento diferente para abordar independiente.</p>
+                        <p><a class="btn btn-primary" href="#">Navegar</a> <a class="btn" href="#">Compartir</a></p>
                       </div>
                     </div>
                   </li>
                   <li class="span4">
-                    <div class="thumbnail"> <img alt="300x200" src="img/sports.jpg">
+                    <div class="thumbnail"> <img alt="300x200" src="img/sports.jpg" />
                       <div class="caption" contenteditable="true">
-                        <h3>改进型哈佛结构</h3>
-                        <p>改进型的哈佛结构具有一条独立的地址总线和一条独立的数据总线，两条总线由程序存储器和数据存储器分时复用，使结构更紧凑。</p>
-                        <p><a class="btn btn-primary" href="#">浏览</a> <a class="btn" href="#">分享</a></p>
+                        <h3>Arquitectura Harvard Modificado</h3>
+                        <p>Arquitectura Harvard modificada tiene un bus separado direcciones y un bus de datos separado, memoria de programa dos bus y la memoria de datos mediante multiplexación por división de tiempo, haciendo que la estructura más compacta.</p>
+                        <p><a class="btn btn-primary" href="#">Navegar</a> <a class="btn" href="#">Compartir</a></p>
                       </div>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">样式 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="progress-info">提示</a></li>
-                <li class=""><a href="#" rel="progress-success">成功</a></li>
-                <li class=""><a href="#" rel="progress-warning">警告</a></li>
-                <li class=""><a href="#" rel="progress-danger">危险</a></li>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Arrastre el</span> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group"><span class="configuration">estilo <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="progress-info">Consejos</a></li>
+                <li class=""><a href="#" rel="progress-success">Éxito</a></li>
+                <li class=""><a href="#" rel="progress-warning">Advertencia</a></li>
+                <li class=""><a href="#" rel="progress-danger">Peligro</a></li>
               </ul>
-              </span> <a class="btn btn-mini" href="#" rel="progress-striped">条纹</a> <a class="btn btn-mini" href="#" rel="active">动画</a> </span>
-              <div class="preview">进度条</div>
+              </div> <a class="btn btn-mini" href="#" rel="progress-striped">Rayas</a> <a class="btn btn-mini" href="#" rel="active">animación</a> 
+              <div class="preview">La barra de progreso</div>
               <div class="view">
                 <div class="progress">
-                  <div class="bar" style="width: 60%;"></div>
+                  <div class="bar" style="width:60%"></div>
                 </div>
               </div>
-            </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="well">嵌入</a> </span>
-              <div class="preview">嵌入媒体</div>
+            
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="well">Insertar</a> </span>
+              <div class="preview">Los medios de comunicación Embedded</div>
               <div class="view">
-                <div class="media"> <a href="#" class="pull-left"> <img src="img/a_002.jpg" class="media-object"> </a>
+                <div class="media"> <a href="#" class="pull-left"> <img src="img/a_002.jpg" class="media-object" /> </a>
                   <div class="media-body" contenteditable="true">
-                    <h4 class="media-heading">嵌入媒体标题</h4>
-                   请尽量使用HTML5兼容的视频格式和视频代码实现视频播放, 以达到更好的体验效果. </div>
+                    <h4 class="media-heading">Título multimedia incorporado</h4>
+                   Por favor, trate de usar los formatos de vídeo compatibles con HTML5 para los códigos de reproducción de vídeo y vídeo, con el fin de lograr una mejor experiencia de navegación. </div>
                 </div>
               </div>
             </div>
-          </li>
-        </ul>
+          
+        
         <ul class="nav nav-list accordion-group">
-          <li class="nav-header"><i class="icon-plus icon-white"></i> 交互组件 <span class="label label-important">NEW!</span>
+          <li class="nav-header"><i class="icon-plus icon-white"></i> Interacciones <span class="label label-important">NUEVO!</span>
             <div class="pull-right popover-info"><i class="icon-question-sign "></i>
               <div class="popover fade right">
                 <div class="arrow"></div>
-                <h3 class="popover-title">帮助</h3>
-                <div class="popover-content">拖放组件到布局容器. 拖入后, 你可以配置显示样式. 如果有任何疑问可访问 <a target="_blank" href="http://twitter.github.io/bootstrap/javascript.html">JavaScript.</a></div>
+                <h3 class="popover-title">Ayuda</h3>
+                <div class="popover-content">Arrastrar y soltar los componentes al esquema del contenedor. Después de la fricción, puede configurar el estilo de visualización. Si usted tiene se puede acceder a cualquier pregunta <a href="http://twitter.github.io/bootstrap/javascript.html" target="_blank">JavaScript.</a></div>
               </div>
             </div>
           </li>
-          <li style="display: none;" class="boxes mute" id="elmJS">
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <div class="preview">遮罩窗体</div>
+          <li class="boxes mute" id="elmJS">
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
+              <div class="preview">Forma Mask</div>
               <div class="view"> 
-                <!-- Button to trigger modal --> 
-                <a id="myModalLink" href="#myModalContainer" role="button" class="btn" data-toggle="modal" contenteditable="true">触发遮罩窗体</a> 
+                 
+                <a id="myModalLink" href="#myModalContainer" class="btn" role="button" data-toggle="modal" contenteditable="true">Forma de máscara de disparo</a> 
                 
-                <!-- Modal -->
+                
                 <div id="myModalContainer" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h3 id="myModalLabel" contenteditable="true">标题栏</h3>
+                    <h3 id="myModalLabel" contenteditable="true">La barra de título</h3>
                   </div>
                   <div class="modal-body">
-                    <p contenteditable="true">显示信息</p>
+                    <p contenteditable="true">Mostrar información</p>
                   </div>
                   <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true" contenteditable="true">关闭</button>
-                    <button class="btn btn-primary" contenteditable="true">保存设置</button>
+                    <button class="btn" data-dismiss="modal" aria-hidden="true" contenteditable="true">Cerrar</button>
+                    <button class="btn btn-primary" contenteditable="true">Guardar configuración</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="navbar-inverse">Inverse</a> 
-              <!--a class="btn btn-mini" href="#" rel="navbar-fixed-top">Navbar fixed top</a--> 
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="navbar-inverse">Inverse</a> 
+               
               </span>
-              <div class="preview">导航栏</div>
+              <div class="preview">Navigation Bar</div>
               <div class="view">
                 <div class="navbar">
                   <div class="navbar-inner">
-                    <div class="container-fluid"> <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a href="#" class="brand" contenteditable="true">网站名</a>
+                    <div class="container-fluid"> <a class="btn btn-navbar" data-target=".navbar-responsive-collapse" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand" contenteditable="true">Nombre del sitio</a>
                       <div class="nav-collapse collapse navbar-responsive-collapse">
                         <ul class="nav" contenteditable="true">
-                          <li class="active"><a href="#">主页</a></li>
-                          <li><a href="#">链接</a></li>
-                          <li><a href="#">链接</a></li>
-                          <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#">下拉菜单 <b class="caret"></b></a>
+                          <li class="active"><a href="#">Inicio</a></li>
+                          <li><a href="#">Enlaces</a></li>
+                          <li><a href="#">Enlaces</a></li>
+                          <li class="dropdown"> <a class="dropdown-toggle" href="#" data-toggle="dropdown">Menú desplegable <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                              <li><a href="#">下拉导航1</a></li>
-                              <li><a href="#">下拉导航2</a></li>
-                              <li><a href="#">其他</a></li>
+                              <li><a href="#">Una navegación desplegable</a></li>
+                              <li><a href="#">Navegación desplegable 2</a></li>
+                              <li><a href="#">Otros</a></li>
                               <li class="divider"></li>
-                              <li class="nav-header">标签</li>
-                              <li><a href="#">链接1</a></li>
-                              <li><a href="#">链接2</a></li>
+                              <li class="nav-header">Etiqueta</li>
+                              <li><a href="#">Link 1</a></li>
+                              <li><a href="#">Enlace 2</a></li>
                             </ul>
                           </li>
                         </ul>
                         <ul class="nav pull-right" contenteditable="true">
-                          <li><a href="#">右边链接</a></li>
+                          <li><a href="#">Enlace a la derecha</a></li>
                           <li class="divider-vertical"></li>
-                          <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#">下拉菜单 <b class="caret"></b></a>
+                          <li class="dropdown"> <a class="dropdown-toggle" href="#" data-toggle="dropdown">Menú desplegable <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                              <li><a href="#">下拉导航1</a></li>
-                              <li><a href="#">下拉导航2</a></li>
-                              <li><a href="#">其他</a></li>
+                              <li><a href="#">Una navegación desplegable</a></li>
+                              <li><a href="#">Navegación desplegable 2</a></li>
+                              <li><a href="#">Otros</a></li>
                               <li class="divider"></li>
-                              <li><a href="#">链接3</a></li>
+                              <li><a href="#">Link 3</a></li>
                             </ul>
                           </li>
                         </ul>
                       </div>
-                      <!-- /.nav-collapse --> 
+                       
                     </div>
                   </div>
-                  <!-- /navbar-inner --> 
+                   
                 </div>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">位置 <span class="caret"></span></a>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown">Ubicación <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="tabs-below">底部</a></li>
-                <li class=""><a href="#" rel="tabs-left">靠左</a></li>
-                <li class=""><a href="#" rel="tabs-right">靠右</a></li>
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="tabs-below">Bottom</a></li>
+                <li class=""><a href="#" rel="tabs-left">Mantengase a la izquierda</a></li>
+                <li class=""><a href="#" rel="tabs-right">Manténgase a la derecha</a></li>
               </ul>
               </span> </span>
-              <div class="preview">切换卡</div>
+              <div class="preview">Tarjeta de conmutación</div>
               <div class="view">
-                <div class="tabbable" id="myTabs"> <!-- Only required for left/right tabs -->
+                <div class="tabbable" id="myTabs"> 
                   <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab1" data-toggle="tab" contenteditable="true">第一部分</a></li>
-                    <li><a href="#tab2" data-toggle="tab" contenteditable="true">第二部分</a></li>
+                    <li class="active"><a href="#tab1" data-toggle="tab" contenteditable="true">La primera parte</a></li>
+                    <li><a href="#tab2" data-toggle="tab" contenteditable="true">La segunda parte</a></li>
                   </ul>
                   <div class="tab-content">
                     <div class="tab-pane active" id="tab1" contenteditable="true">
-                      <p>第一部分内容.</p>
+                      <p>La primera parte del contenido.</p>
                     </div>
                     <div class="tab-pane" id="tab2" contenteditable="true">
-                      <p>第二部分内容.</p>
+                      <p>La segunda parte del contenido.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"> <span class="btn-group"> <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">样式 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="active"><a href="#" rel="">默认</a></li>
-                <li class=""><a href="#" rel="alert-info">提示</a></li>
-                <li class=""><a href="#" rel="alert-error">错误</a></li>
-                <li class=""><a href="#" rel="alert-success">成功</a></li>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Arrastre el</span> <a class="btn btn-mini dropdown-toggle" href="#" data-toggle="dropdown"><span class="btn-group"><span class="configuration">estilo <span class="caret"></span></a><ul class="dropdown-menu">
+                <li class="active"><a href="#" rel="">Por defecto</a></li>
+                <li class=""><a href="#" rel="alert-info">Consejos</a></li>
+                <li class=""><a href="#" rel="alert-error">Error</a></li>
+                <li class=""><a href="#" rel="alert-success">Éxito</a></li>
               </ul>
-              </span> </span>
-              <div class="preview">提示框</div>
+              </ul> 
+              <div class="preview">Caja Tip</div>
               <div class="view">
                 <div class="alert" contenteditable="true">
                   <button type="button" class="close" data-dismiss="alert">×</button>
-                  <h4>提示!</h4>
-                  <strong>警告!</strong> 请注意你的个人隐私安全. </div>
+                  <h4>Sugerencia:</h4>
+                  <strong>Advertencia!</strong> Tenga en cuenta que su privacidad personal. </div>
               </div>
-            </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button></span>
-              <div class="preview">手风琴切换</div>
+            
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
+              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button></span>
+              <div class="preview">Interruptor de Acordeón</div>
               <div class="view">
                 <div class="accordion" id="myAccordion">
                   <div class="accordion-group">
-                    <div class="accordion-heading"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#myAccordion" href="#collapseOne" contenteditable="true"> 选项卡 #1 </a> </div>
+                    <div class="accordion-heading"> <a class="accordion-toggle" href="#collapseOne" data-toggle="collapse" data-parent="#myAccordion" contenteditable="true"> Tab # 1 </a> </div>
                     <div id="collapseOne" class="accordion-body collapse in">
-                      <div class="accordion-inner" contenteditable="true"> 功能块... </div>
+                      <div class="accordion-inner" contenteditable="true"> Bloque de función ... </div>
                     </div>
                   </div>
                   <div class="accordion-group">
-                    <div class="accordion-heading"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#myAccordion" href="#collapseTwo" contenteditable="true"> 选项卡 #2 </a> </div>
+                    <div class="accordion-heading"> <a class="accordion-toggle" href="#collapseTwo" data-toggle="collapse" data-parent="#myAccordion" contenteditable="true"> Tab # 2 </a> </div>
                     <div id="collapseTwo" class="accordion-body collapse">
-                      <div class="accordion-inner" contenteditable="true"> 功能块... </div>
+                      <div class="accordion-inner" contenteditable="true"> Bloque de función ... </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button></span>
-              <div class="preview">轮换图</div>
+            <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span>
+              <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button></span>
+              <div class="preview">Figura Rotación</div>
               <div class="view">
                 <div class="carousel slide" id="myCarousel">
                   <ol class="carousel-indicators">
                     <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
-                    <li data-slide-to="1" data-target="#myCarousel" class=""></li>
-                    <li data-slide-to="2" data-target="#myCarousel" class=""></li>
+                    <li class="" data-slide-to="1" data-target="#myCarousel"></li>
+                    <li class="" data-slide-to="2" data-target="#myCarousel"></li>
                   </ol>
                   <div class="carousel-inner">
-                    <div class="item active"> <img alt="" src="img/1.jpg">
+                    <div class="item active"> <img alt="" src="img/1.jpg" />
                       <div class="carousel-caption" contenteditable="true">
-                        <h4>棒球</h4>
-                        <p>棒球运动是一种以棒打球为主要特点，集体性、对抗性很强的球类运动项目，在美国、日本尤为盛行。</p>
+                        <h4>Béisbol</h4>
+                        <p>El béisbol es una especie de palo para jugar como las principales características de los colectivos, de confrontación de proyectos fuertes juegos de pelota en los Estados Unidos, Japón es particularmente frecuente.</p>
                       </div>
                     </div>
-                    <div class="item"> <img alt="" src="img/2.jpg">
+                    <div class="item"> <img alt="" src="img/2.jpg" />
                       <div class="carousel-caption" contenteditable="true">
-                        <h4>冲浪</h4>
-                        <p>冲浪是以海浪为动力，利用自身的高超技巧和平衡能力，搏击海浪的一项运动。运动员站立在冲浪板上，或利用腹板、跪板、充气的橡皮垫、划艇、皮艇等驾驭海浪的一项水上运动。</p>
+                        <h4>Surfing</h4>
+                        <p>Navegar por las olas es impulsado por sus propias habilidades y equilibrio magníficos, una campaña luchando contra las olas.Atleta de pie sobre una tabla de surf, o utilizar la web, de rodillas juntas, alfombras de goma inflables, remo, kayak, etc, para controlar las oleadas de los deportes de agua.</p>
                       </div>
                     </div>
-                    <div class="item"> <img alt="" src="img/3.jpg">
+                    <div class="item"> <img alt="" src="img/3.jpg" />
                       <div class="carousel-caption" contenteditable="true">
-                        <h4>自行车</h4>
-                        <p>以自行车为工具比赛骑行速度的体育运动。1896年第一届奥林匹克运动会上被列为正式比赛项目。环法赛为最著名的世界自行车锦标赛。</p>
+                        <h4>Ciclismo</h4>
+                        <p>Andar en bicicleta como una herramienta para que coincida con la velocidad del deporte.1896 fueron los primeros Juegos Olímpicos como un evento oficial.Tour de Francia es el más famoso Campeonato Mundial de Ciclismo.</p>
                       </div>
                     </div>
                   </div>
-                  <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a> <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a> </div>
+                  <a href="#myCarousel" class="left carousel-control" data-slide="prev">&lt;</a> <a href="#myCarousel" class="right carousel-control" data-slide="next">&gt;</a> </div>
               </div>
             </div>
-          </li>
-        </ul>
+          
+        
         <ul class="nav nav-list accordion-group">
-          <li class="nav-header"><i class="icon-plus icon-white"></i> 应用扩展 </li>
-          <li style="display: none;" class="boxes mute" id="elmComm">
-            <div class="preview">建设中...</div>
+          <li class="nav-header"><i class="icon-plus icon-white"></i> Extensión de aplicación </li>
+          <li class="boxes mute" id="elmComm">
+            <div class="preview">Bajo construcción ...</div>
           </li>
         </ul>
-      </div>
-    </div>
-    <!--/span-->
-    <div class="demo ui-sortable" style="min-height: 304px; ">
+      
+    
+    
+    <div class="demo ui-sortable" style="min-height:304px">
       
       <div class="lyrow">
-  <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>remove</a>
-  <span class="drag label"><i class="icon-move"></i>drag</span>
-  <div class="preview">9 3</div>
+  <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> eliminar</a> <span class="drag label"><i class="icon-move"></i> arrastre</span>
+  <div class="preview">93</div>
   <div class="view">
     <div class="row-fluid clearfix">
       <div class="span12 column ui-sortable">
         
-        <div class="box box-element ui-draggable" style="display: block; "> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="well">嵌入</a> </span>
-              <div class="preview">概述</div>
+        <div class="box box-element ui-draggable" style="display:block"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i> Eliminar</a> <span class="drag label"><i class="icon-move"></i> Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Edición</button> <a class="btn btn-mini" href="#" rel="well">Insertar</a> </span>
+              <div class="preview">Información general</div>
               <div class="view">
                 <div class="hero-unit" contenteditable="true">
-                  <p>一种风，只流浪在一座山谷；</p>
-                  <p>一道堤，只护住一湾星河。</p>
-                  <p>每次仰望星空，我总是闭上眼，</p>
-                  <p>因为最美的一颗不在天上。</p>                  
+                  <p>Un viento, simplemente pasear en un valle;</p>
+                  <p>Un muro de contención, sólo cubra su un Galaxy bahía.</p>
+                  <p>Cada vez mirando las estrellas, siempre cierro los ojos,</p>
+                  <p>Debido a la más bella no está en el cielo.</p>                  
                 </div>
               </div>
             </div>
@@ -875,50 +859,48 @@
   
   
     </div>
-    <!-- end demo -->
-    <!--/span-->
+    
+    
     <div id="download-layout">
       <div class="container-fluid"></div>
     </div>
-  </div>
-  <!--/row--> 
-</div>
-<!--/.fluid-container--> 
-<div class="modal hide fade" role="dialog" id="editorModal">
+  
+   
+
+ 
+<div class="modal hide fade" id="editorModal" role="dialog">
   <div class="modal-header"> <a class="close" data-dismiss="modal">×</a>
-    <h3>编辑</h3>
+    <h3>Edición</h3>
   </div>
   <div class="modal-body">
     <p>
       <textarea id="contenteditor"></textarea>
     </p>
   </div>
-  <div class="modal-footer"> <a id="savecontent" class="btn btn-primary" data-dismiss="modal">保存</a> <a class="btn" data-dismiss="modal">关闭</a> </div>
+  <div class="modal-footer"> <a id="savecontent" class="btn btn-primary" data-dismiss="modal">Guardar</a> <a class="btn" data-dismiss="modal">Cerrar</a> </div>
 </div>
-<div class="modal hide fade" role="dialog" id="downloadModal">
+<div class="modal hide fade" id="downloadModal" role="dialog">
   <div class="modal-header"> <a class="close" data-dismiss="modal">×</a>
-    <h3>下载</h3>
+    <h3>Descargar</h3>
   </div>
   <div class="modal-body">
-    <p>已在下面生成干净的HTML, 可以复制粘贴代码到你的项目.</p>
+    <p>HTML limpia generada a continuación, puede copiar y pegar el código en su proyecto.</p>
     <div class="btn-group">
-      <button type="button" id="fluidPage" class="active btn btn-info"><i class="icon-fullscreen icon-white"></i> 自适应宽度</button>
-      <button type="button" class="btn btn-info" id="fixedPage"><i class="icon-screenshot icon-white"></i> 固定宽度</button>
+      <button type="button" id="fluidPage" class="active btn btn-info"><i class="icon-fullscreen icon-white"></i> Ancho adaptable</button>
+      <button type="button" class="btn btn-info" id="fixedPage"><i class="icon-screenshot icon-white"></i> Ancho fijo</button>
     </div>
-    <br>
-    <br>
+    <br />
+    <br />
     <p>
       <textarea></textarea>
     </p>
   </div>
-  <div class="modal-footer"> <a class="btn" data-dismiss="modal">关闭</a> </div>
+  <div class="modal-footer"> <a class="btn" data-dismiss="modal">Cerrar</a> </div>
 </div>
-<div class="modal hide fade" role="dialog" id="shareModal">
+<div class="modal hide fade" id="shareModal" role="dialog">
   <div class="modal-header"> <a class="close" data-dismiss="modal">×</a>
-    <h3>保存</h3>
+    <h3>Guardar</h3>
   </div>
-  <div class="modal-body">保存成功</div>
-  <div class="modal-footer"> <a class="btn" data-dismiss="modal">Close</a> </div>
+  <div class="modal-body">Guardado con éxito</div>
+  <div class="modal-footer"> <a class="btn" data-dismiss="modal">Cerca</a> </div>
 </div>
-</body>
-</html>
